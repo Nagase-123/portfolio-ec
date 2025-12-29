@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+main {
+    font-size: 14px;
+    color: #333333;
+    width: 100%;
+    height: 70vh;
+}
+
+.about-container {
+    width: 50%;
+}
+
+.about-container p {
+    margin-bottom: 30px;
+    line-height: 27px;
+}
+
+.about-container p:first-of-type {
+    margin-top: 10px;
+}
+
+
+/*****
+*** ここからモバイル ***
+******/
+@media screen and (max-width: 478px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        min-height: 100vh;
+    }
+
+    .about-container {
+        display: block;
+        width: 100%;
+        margin-bottom: 110px;
+
+    }
+}

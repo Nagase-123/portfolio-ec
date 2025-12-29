@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+main {
+    font-size: 14px;
+    color: #333333;
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 147px 1fr;
+    row-gap: 20px;
+}
+
+.company-wrapper {
+    width: 100%;
+}
+
+.company-container {
+    width: 50%;
+}
+
+.company-container p {
+    margin-bottom: 50px;
+    margin-top: 40px;
+}
+
+dt,
+dd {
+    padding-bottom: 23px;
+    border-bottom: 1px solid #DCDBDB;
+}
+
+.google-map {
+    margin-top: 40px;
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.google-map iframe {
+    width: 600px;
+    height: 300px;
+}
+
+
+/*****
+*** ここからモバイル ***
+******/
+@media screen and (max-width: 478px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .company-container {
+        width: 100%;
+    }
+
+    .google-map {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+    }
+
+    .google-map iframe {
+        width: 100%;
+    }
+}

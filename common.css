@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+/*****
+*** ここからPC ***
+******/
+html {
+    width: 100%;
+}
+
+body {
+    max-width: 1200px;
+    margin-top: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Hiragino, Kaku, Gothic, ProN;
+    color: #333333;
+}
+
+/*ヘッダー部分*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    top: 0;
+    height: 80px;
+    position: sticky;
+}
+
+.logo-wrapper img {
+    width: 185px;
+    height: 23px;
+}
+
+/*ハンバーガーメニュー*/
+#navi {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    color: #fff;
+    padding: 36px 50px;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
+}
+
+#navi a {
+    color: #fff;
+}
+
+#navi li {
+    margin-bottom: 14px;
+}
+
+
+/*
+ハンバーガーメニュー
+メニューが開いている時
+*/
+.open #navi {
+    left: 0;
+    opacity: 1;
+}
+
+.header-hamburger-menue {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 20;
+}
+
+/*
+ハンバーガーメニューの線の設定（メニューが閉じている時）
+*/
+.header-hamburger-menue span {
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    border-radius: 4px;
+    transition: all 0.5s;
+    background-color: #333333;
+    transition: ease .4s;
+    display: block;
+}
+
+.header-hamburger-menue span:nth-child(1) {
+    top: 10px;
+}
+
+.header-hamburger-menue span:nth-child(2) {
+    bottom: 5px;
+}
+
+.open .header-hamburger-menue span {
+    background-color: #fff;
+}
+
+/*
+1本目の線を-45度回転
+*/
+.open .header-hamburger-menue span:nth-child(1) {
+    -webkit-transform: translateY(4px) rotate(-45deg);
+    transform: translateY(4px) rotate(-45deg);
+}
+
+/*
+2本目の線を45度回転
+*/
+.open .header-hamburger-menue span:nth-child(2) {
+    -webkit-transform: translateY(-7px) rotate(45deg);
+    transform: translateY(-7px) rotate(45deg);
+}
+
+#mask {
+    display: none;
+    transition: all 0.5s;
+}
+
+/*
+メニューを開いている時は、全体を黒背景にする
+*/
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+    z-index: 10;
+    cursor: pointer;
+}
+
+/*フッター部分*/
+footer {
+    margin-top: 112px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li {
+    padding-right: 30px;
+    font-size: 12px;
+}
+
+footer p {
+    font-size: 9px;
+}
+
+
+/*****
+*** ここからモバイル ***
+******/
+@media screen and (max-width: 478px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        max-width: 478px;
+        padding: 0 40px;
+    }
+
+    footer {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer p {
+        margin-top: 10px;
+    }
+}
