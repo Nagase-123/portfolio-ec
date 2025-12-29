@@ -128,6 +128,11 @@ a {
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
 }
 
 /* change colours to suit your needs */
@@ -363,4 +368,5 @@ footer p {
     footer p {
         margin-top: 10px;
     }
+
 }
