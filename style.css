@@ -32,7 +32,7 @@ main {
 
 .view-more-link {
   display: flex;
-  justify-self: center;
+  justify-content: center; 
   font-size: 14px;
   margin-top: 40px;
 }
@@ -100,5 +100,6 @@ input[type="radio"] {
     height: 80%;
     object-fit: cover;
   }
+
 
 }
